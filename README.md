@@ -11,6 +11,16 @@ Initial Setup
 
 ### Patches for this demo
 
+#### TL;DR:
+
+Just run this command and let me handle the rest for you...
+
+    $ curl -L http://bit.ly/loadays-opennebula | bash -s
+
+**Skip the rest of this section!**
+
+#### I really want to know what's going on...
+
 Make Sunstone listen in 0.0.0.0
 
     # sed -i 's/^:host.*/:host: 0.0.0.0/' /etc/one/sunstone-server.conf
