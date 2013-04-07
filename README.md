@@ -235,7 +235,7 @@ Create a VM template
 
 Instantiate a VM
 
-    $ onetemplate instantiate 0 -n myname
+    $ onetemplate instantiate 0 --name myname
     VM ID: 0
 
     $ onevm list
