@@ -6,8 +6,8 @@ Initial Setup
 ### Install the OpenNebula packages
 
     # cd /etc/yum.repos.d/
-    # curl -O ...
-    # yum install opennebula-*
+    # curl -O https://nazar.karan.org/results/opennebula/_opennebula.repo
+    # yum install opennebula-server opennebula-sunstone opennebula-node-kvm
 
 ### Patches for this demo
 
@@ -26,11 +26,18 @@ This script will:
 Quick Tour
 ----------
 
+### OpenNebula Services
+
+    # service opennebula start
+    # service opennebula-sunstone start
+
+### CLI
+
 Login as oneadmin
 
     # su - oneadmin
 
-### CLI
+OpenNebula commands?
 
     $ one[TAB]
     $ oneuser list
@@ -145,8 +152,7 @@ Network
 Create a bridge (as root)
 
     # brctl addbr br0
-    # ip addr add 192.168.0.1/24 dev br0
-    # ip link set br0 up
+    # ifconfig br0 192.168.0.1/24 up
 
 Create a network
 
